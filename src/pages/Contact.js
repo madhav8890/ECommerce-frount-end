@@ -4,6 +4,8 @@ import BreadCrumb from '../components/BreadCrumb'
 import {IoCallOutline} from 'react-icons/io5'
 import {CiMail, CiCircleInfo, CiHome} from 'react-icons/ci'
 import { BsLinkedin, BsGithub, BsYoutube, BsInstagram } from 'react-icons/bs'
+import Container from '../components/Container'
+import CustomInput from '../components/CustomInput'
 
  
 const Contact = () => {
@@ -11,8 +13,7 @@ const Contact = () => {
     <>
           <Meta title={"Contect Us"} />
         <BreadCrumb title="Contect Us"/>
-    <div className='contect-wrapper py-5 home-wrapper-2'>
-      <div className='container-xxl'>
+    <Container class1='contect-wrapper py-5 home-wrapper-2'>
         <div className='row'>
           <div className='col-12'>
             <iframe
@@ -30,19 +31,14 @@ const Contact = () => {
           <div>
             <h3 className='contect-title mb-4'>Conatect Us</h3>
             <form action='' className='d-flex flex-column gap-15'>
-              <div>
-                <input type='text'  placeholder='Name' className='form-control'/>
-              </div>
-              <div>
-                <input type='email'  placeholder='email' className='form-control'/>
-              </div>
-              <div>
-                <input type='tel'  placeholder='Mobile' className='form-control'/>
-              </div>
+              <CustomInput type='text'  placeholder='Name' />
+              <CustomInput type='email'  placeholder='email' />
+              <CustomInput type='tel'  placeholder='Mobile' />
               <div>
                 <textarea type='text' placeholder='Comments' cols='30' rows='4' className='form-control'/>
               </div>
-            </form><div>
+            </form>
+            <div>
             <button className='button border-0 mt-4'> submit</button>
             </div>
           </div>
@@ -84,9 +80,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
       
-    </div>
 
     </>
   )
